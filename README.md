@@ -1,4 +1,4 @@
-# Work.ua
+# Work.ua test task
 
 npm install
 
