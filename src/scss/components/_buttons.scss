@@ -1,0 +1,33 @@
+.button {
+  display: block;
+  padding: 10px 20px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  font-size: $font-size-sm;
+  line-height: 20px;
+  color: $white;
+  appearance: none;
+
+  &_action {
+    background: $green-500;
+    font-weight: $font-weight_bold;
+
+    @media (max-width: $screen_mobile) {
+      width: 100%;
+    }
+  }
+
+  &_submit {
+    background: $blue-500;
+    font-weight: $font-weight_bold;
+  }
+
+  &_cancel {
+    height: 24px;
+    padding: 0;
+    background: none;
+    font-weight: $font-weight_regular;
+    color: $red-500;
+  }
+}

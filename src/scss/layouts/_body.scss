@@ -1,0 +1,33 @@
+
+body {
+	background: $bg_body;
+	font-family: $font-family;
+	font-style: normal;
+	font-weight: $font-weight_regular;
+	font-size: $font-size;
+	color: $color_text;
+	line-height: $line-height;
+}
+
+b,
+strong {
+	font-weight: $font-weight_bold;
+}
+
+i,
+em {
+	font-style: italic;
+}
+
+a, .link {
+	text-decoration: none;
+	color: $color_link;
+}
+
+.note {
+	color: $color_note;
+}
+
+.hidden {
+	display: none !important;
+}

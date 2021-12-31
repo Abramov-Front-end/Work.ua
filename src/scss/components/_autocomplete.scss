@@ -1,0 +1,24 @@
+.autocomplete {
+  min-width: 250px;
+  max-height: 200px;
+  overflow-y: auto;
+  background: $white;
+  border: 1px solid $grey-300;
+  box-shadow: 0 0 20px rgba($black, .25);
+  position: absolute;
+
+  &__item {
+    padding: 10px $gutter_default;
+    border-bottom: 1px solid $grey-300;
+    cursor: pointer;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      background: $blue-500;
+      color: $white;
+    }
+  }
+}

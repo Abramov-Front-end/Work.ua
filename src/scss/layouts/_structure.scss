@@ -1,0 +1,13 @@
+.site-wrap {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 30px 20px 80px;
+  min-width: 320px;
+
+  .content {
+    flex: 1 1 auto;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 980px;
+  }
+}

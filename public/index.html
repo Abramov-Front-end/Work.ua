@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Вакансии</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="site-wrap">
+        <section class="content">
+            <div class="title-wrapper">
+                <h1 class="title title_section">Вакансии и отклики</h1>
+                <div class="info">
+                    <i class="info__icon">
+                        <img src="images/info.svg" alt="">
+                    </i>
+                    <div class="info__text dropdown">Некоторая информация</div>
+                </div>
+                <button type="button" class="button button_action" data-modal="formModal">Создать вакансию</button>
+            </div>
+            <ul class="vacancies-list" id="vacanciesList"></ul>
+            <button type="button" class="button button_action" data-modal="formModal">Создать вакансию</button>
+        </section>
+    </div>
+    <div class="modal" id="formModal">
+        <div class="modal__body">
+            <h2 class="modal__header title title_page" id="modalTitle">Создать вакансию</h2>
+            <div class="modal__content form">
+                <div class="form__errors" id="formErrors">
+                    <h3 class="title title_section form__errors__title">Ошибка при заполнении формы</h3>
+                    <p class="form__errors__text">Пожалуйста, отредактируйте поля, отмеченные красным, и нажмите кнопку «Сохранить».</p>
+                </div>
+                <div class="form__content">
+                    <form action="" id="vacancyForm">
+                        <input type="hidden" name="id" value="">
+                        <fieldset class="form__part">
+                            <h4 class="title title_section">Название должности<span class="required">*</span></h4>
+                            <div class="form__row">
+                                <input type="text" name="name" class="form__input form__input_big " placeholder="Оставить комментарий">
+                            </div>
+                        </fieldset>
+                        <fieldset class="form__part">
+                            <h4 class="title title_section">Условия работы</h4>
+                            <div class="form__row">
+                                <label for="selectCity" class="form__label">Город работы<span class="required">*</span>:</label>
+                                <input type="text" id="selectCity" autocomplete="disabled" placeholder="Город" class="form__input form__input_medium">
+                                <ul id="cityAutocomplete" class="autocomplete"></ul>
+                                <input type="hidden" name="city" value="">
+                            </div>
+                            <div class="form__row">
+                                <label for="address" class="form__label">Адрес работы<span class="required">*</span>:</label>
+                                <input type="text" name="address" value="" placeholder="Улица и дом" class="form__input form__input_big" id="address" >
+                            </div>
+                        </fieldset>
+                        <fieldset class="form__part">
+                            <h4 class="title title_section">Зарплата<span class="required">*</span></h4>
+                            <div class="form__row">
+                                <div class="form__row__group">
+                                    <div class="form__radio">
+                                        <input type="radio" name="priceRadio" value="2" id="priceRadio_range" checked>
+                                        <label for="priceRadio_range" class="form__label">Диапазон</label>
+
+                                        <div class="form__input__group">
+                                            <input type="text" name="price[from]" class="form__input form__input_small" placeholder="от">
+                                            <span class="seperator"> - </span>
+                                            <input type="text" name="price[to]" class="form__input form__input_small" placeholder="до">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form__row__group">
+                                    <div class="form__radio">
+                                        <input type="radio" name="priceRadio" value="1" id="priceRadio_once">
+                                        <label for="priceRadio_once" class="form__label">Одно значение</label>
+
+                                        <div class="form__input__group">
+                                            <input type="text" class="form__input form__input_small" name="price" placeholder="Сумма" disabled> <span>грн в месяц</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form__radio">
+                                    <input type="radio" name="priceRadio" value="0" id="priceRadio_none">
+                                    <label for="priceRadio_none" class="form__label">Не указывать <span class="note">(не рекомендуется)</span></label>
+                                </div>
+                            </div>
+                            <div class="form__row">
+                                <label for="priceComment" class="form__label">Комментарий к зарплате</label>
+                                <input type="text" id="priceComment" name="priceComment" class="form__input form__input_medium">
+                            </div>
+                        </fieldset>
+                        <div class="form__footer">
+                            <button class="button button_submit">Сохранить</button>
+                            <span>или</span>
+                            <button type="button" class="button button_cancel close-modal">Отменить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
